@@ -8,10 +8,90 @@
     <!-- tailwind and daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/e670c6a626.js" crossorigin="anonymous"></script>
+    <!-- styles -->
+    <style>
+        .font-lato{
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+    <!-- custom colors -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'doc-primary': '#F85559',
+              }
+            }
+          }
+        }
+      </script>
 </head>
 
-<body>
-    <header>
+<body class="font-lato">
+    <header class="container mx-auto">
+        <!-- navbar section -->
+        <nav class="container mx-auto rounded-full bg-doc-primary flex justify-between items-center p-5 px-10 mt-10">
+            <div class="texts">
+                <ul class="flex gap-5 text-white text-lg">
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Shop</li>
+                    <li>All Fruits</li>
+                </ul>
+            </div>
+            <div class="logo flex items-center gap-3">
+                <img src="images/logo.png" alt="">
+                <h3 class="text-xl font-semibold text-white">Fruit Burst</h3>
+            </div>
+            <div class="search-bar">
+                <input class="rounded-full p-3 px-5 pr-10" type="search" name="searchbar" id="" placeholder="Search here" >
+                <div class="absolute top-20 right-20"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+        </nav>
+
+        <!-- carousel section -->
+        <div class="carousel w-full mt-10">
+            <!-- slide 1 -->
+            <div id="slide1" class="carousel-item relative w-full">
+              <img src="/images/banner1.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a> 
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <!-- slide 2 -->
+            <div id="slide2" class="carousel-item relative w-full">
+              <img src="/images/banner2.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a> 
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <!-- slide 3 -->
+            <div id="slide3" class="carousel-item relative w-full">
+              <img src="/images/banner3.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle">❮</a> 
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <!-- slide 4 -->
+            <div id="slide4" class="carousel-item relative w-full">
+              <img src="/images/banner4.png" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" class="btn btn-circle">❮</a> 
+                <a href="#slide1" class="btn btn-circle">❯</a>
+              </div>
+            </div>
+        </div>
 
     </header>
     <main>
